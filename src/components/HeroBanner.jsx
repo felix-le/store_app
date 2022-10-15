@@ -7,8 +7,8 @@ import { EffectFade, EffectCreative } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/effect-fade'
 
-import imgSlide1 from '@/images/pexels-tara-winstead-6690916.jpg'
-import imgSlide2 from '@/images/artboard-studio-B40ztSGQTZY-unsplash.jpeg'
+import image1 from '@/images/pexels-tara-winstead-6690916.jpg';
+import image2 from '@/images/pexels-ylanite-koppens-1693653.jpg';
 
 const data = [
   {
@@ -24,7 +24,7 @@ const data = [
       text: 'More details',
       href: '#section2',
     },
-    image: imgSlide1,
+    image: image1,
   },
   {
     title: 'Hero banner',
@@ -39,7 +39,7 @@ const data = [
       text: 'More details',
       href: '#section2',
     },
-    image: imgSlide2,
+    image: image2,
   },
 ]
 
@@ -47,7 +47,7 @@ export function HeroBanner() {
   const height = 80
   const heightDesktop = 136
   return (
-    <section className="overflow-hidden bg-slate-100 lg:bg-transparent">
+    <section className="overflow-hidden bg-slate-100">
       <Swiper
         spaceBetween={50}
         slidesPerView={1}
@@ -67,16 +67,20 @@ export function HeroBanner() {
         modules={[EffectCreative]}
       >
         {data.map((item, index) => (
-          <SwiperSlide key={index} className={`relative align-center h-${height} md:h-${heightDesktop}`}>
-            <Container className="container relative z-10">
+          <SwiperSlide
+            key={index}
+            style={{backgroundImage: 'url(' + item.image.src + ')'}}
+            className={`align-center h-auto bg-cover bg-no-repeat bg-right bg-slate-100 py-16`}
+          >
+            <div className="max-w-7xl mx-auto lg:pb-36 lg:pt-20 xl:py-32 px-4 sm:px-6">
               <div className="lg:grid lg:justify-end">
                 <div
-                  className={`sm:text-center md:mx-auto md:max-w-xl lg:text-left`}
+                  className={`sm:text-center lg:mx-auto lg:max-w-lg lg:text-left`}
                 >
                   <h1>
                     <span className="mt-1 block text-4xl font-bold tracking-tight sm:text-5xl xl:text-6xl">
-                      <span className="block text-gray-900">{item.title}</span>
-                      <span className="block text-blue-600">
+                      <span className="text-gray-900 mr-4">{item.title}</span>
+                      <span className="text-indigo-600">
                         {item.titleHighlight}
                       </span>
                     </span>
@@ -84,9 +88,9 @@ export function HeroBanner() {
                   <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
                     {item.description}
                   </p>
-                  <div className="mt-8 mb-16 flex gap-4 sm:mx-auto sm:max-w-lg sm:justify-center lg:mx-0 lg:justify-start">
+                  <div className="mt-8 flex gap-4 sm:mx-auto sm:max-w-lg sm:justify-center lg:mx-0 lg:justify-start">
                     {item.button && (
-                      <Button href={item.button.href} color="blue">
+                      <Button href={item.button.href} color="indigo">
                         {item.button.text}
                       </Button>
                     )}
@@ -94,7 +98,7 @@ export function HeroBanner() {
                       <Button
                         href={item.button2.href}
                         variant="outline"
-                        color="blue"
+                        color="indigo"
                       >
                         More details
                       </Button>
@@ -102,15 +106,6 @@ export function HeroBanner() {
                   </div>
                 </div>
               </div>
-            </Container>
-            <div className="absolute top-0 left-0 z-0 h-full w-full">
-              <Image
-                src={item.image}
-                width={'100%'}
-                height={'100%'}
-                alt={item.title}
-                layout="responsive"
-              />
             </div>
           </SwiperSlide>
         ))}

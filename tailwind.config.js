@@ -3,6 +3,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{js,jsx}'],
+  important: true,
   theme: {
     boxShadow: {
       sm: '0 2px 6px rgb(15 23 42 / 0.08)',
@@ -35,7 +36,7 @@ module.exports = {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
         display: ['Cabinet Grotesk', ...defaultTheme.fontFamily.sans],
       },
-      spacing: {
+      height: {
         '128': '32rem',
         '136': '40rem'
       }

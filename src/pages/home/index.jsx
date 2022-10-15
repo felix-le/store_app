@@ -14,6 +14,7 @@ import { Testimonial } from '@/components/Testimonial'
 import { Testimonials } from '@/components/Testimonials'
 import avatarImage1 from '@/images/avatars/avatar-1.png'
 import avatarImage2 from '@/images/avatars/avatar-2.png'
+import NavTop from '@/components/NavTop'
 
 export default function Home() {
   return (
@@ -24,9 +25,10 @@ export default function Home() {
         </title>
         <meta
           name="description"
-          content="A book and video course that teaches you how to design your own icons from scratch. "
+          content="Homepage"
         />
       </Head>
+      <NavTop />
       <HeroBanner />
       <Introduction />
       <NavBar />
