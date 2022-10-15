@@ -4,7 +4,6 @@ import { Author } from '@/components/Author'
 import { Footer } from '@/components/Footer'
 import { FreeChapters } from '@/components/FreeChapters'
 import { HeroBanner } from '@/components/HeroBanner'
-import { Introduction } from '@/components/Introduction'
 import { NavBar } from '@/components/NavBar'
 import { Pricing } from '@/components/Pricing'
 import { Resources } from '@/components/Resources'
@@ -15,6 +14,7 @@ import { Testimonials } from '@/components/Testimonials'
 import avatarImage1 from '@/images/avatars/avatar-1.png'
 import avatarImage2 from '@/images/avatars/avatar-2.png'
 import NavTop from '@/components/NavTop'
+import Steps from '@/components/Steps'
 
 export default function Home() {
   return (
@@ -30,7 +30,7 @@ export default function Home() {
       </Head>
       <NavTop />
       <HeroBanner />
-      <Introduction />
+      <Steps />
       <NavBar />
       <TableOfContents />
       <Testimonial

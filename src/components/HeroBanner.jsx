@@ -88,7 +88,7 @@ export function HeroBanner() {
                   <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
                     {item.description}
                   </p>
-                  <div className="mt-8 flex gap-4 sm:mx-auto sm:max-w-lg sm:justify-center lg:mx-0 lg:justify-start">
+                  <div className="mt-8 flex flex-wrap sm:flex-nowrap gap-4 sm:mx-auto sm:max-w-lg sm:justify-center lg:mx-0 lg:justify-start">
                     {item.button && (
                       <Button href={item.button.href} color="indigo">
                         {item.button.text}
