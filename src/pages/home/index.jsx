@@ -8,44 +8,155 @@ import { NavBar } from '@/components/NavBar'
 import { Pricing } from '@/components/Pricing'
 import { Resources } from '@/components/Resources'
 import { Screencasts } from '@/components/Screencasts'
-import { TableOfContents } from '@/components/TableOfContents'
 import { Testimonial } from '@/components/Testimonial'
 import { Testimonials } from '@/components/Testimonials'
 import avatarImage1 from '@/images/avatars/avatar-1.png'
 import avatarImage2 from '@/images/avatars/avatar-2.png'
 import NavTop from '@/components/NavTop'
 import Steps from '@/components/Steps'
+import TextHeader from '@/components/TextHeader'
+
+import image1 from '@/images/pexels-tara-winstead-6690916.jpg'
+import image2 from '@/images/pexels-ylanite-koppens-1693653.jpg'
+import ProductsList from '@/components/ProductsList'
+
+const navigation = [
+  { name: 'Product', href: '#' },
+  { name: 'Features', href: '#' },
+  { name: 'Marketplace', href: '#' },
+  { name: 'Company', href: '#' },
+]
+
+const steps = [
+  {
+    name: 'Push to Deploy',
+    description:
+      'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
+  },
+  {
+    name: 'SSL Certificates',
+    description:
+      'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
+  },
+  {
+    name: 'Simple Queues',
+    description:
+      'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
+  },
+]
+
+const heroList = [
+  {
+    title: 'Data to enrich your',
+    titleHighlight: 'online business',
+    description:
+      'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.',
+    button: {
+      text: 'Our products',
+      href: '#section1',
+    },
+    button2: {
+      text: 'More details',
+      href: '#section2',
+    },
+    image: image1,
+  },
+  {
+    title: 'Hero banner',
+    titleHighlight: 'Slide 2',
+    description:
+      'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.',
+    button: {
+      text: 'Our products',
+      href: '#section1',
+    },
+    button2: {
+      text: 'More details',
+      href: '#section2',
+    },
+    image: image2,
+  },
+]
+
+const products = [
+  {
+    id: 1,
+    name: 'Black Basic Tee',
+    price: '$32',
+    href: '#',
+    imageSrc:
+      'https://tailwindui.com/img/ecommerce-images/home-page-03-favorite-01.jpg',
+    imageAlt: "Model wearing women's black cotton crewneck tee.",
+  },
+  {
+    id: 1,
+    name: 'Black Basic Tee',
+    price: '$32',
+    href: '#',
+    imageSrc:
+      'https://tailwindui.com/img/ecommerce-images/home-page-03-favorite-01.jpg',
+    imageAlt: "Model wearing women's black cotton crewneck tee.",
+  },
+  {
+    id: 2,
+    name: 'Black Basic Tee',
+    price: '$32',
+    href: '#',
+    imageSrc:
+      'https://tailwindui.com/img/ecommerce-images/home-page-03-favorite-01.jpg',
+    imageAlt: "Model wearing women's black cotton crewneck tee.",
+  },
+  {
+    id: 3,
+    name: 'Black Basic Tee',
+    price: '$32',
+    href: '#',
+    imageSrc:
+      'https://tailwindui.com/img/ecommerce-images/home-page-03-favorite-01.jpg',
+    imageAlt: "Model wearing women's black cotton crewneck tee.",
+  },
+  {
+    id: 4,
+    name: 'Black Basic Tee',
+    price: '$32',
+    href: '#',
+    imageSrc:
+      'https://tailwindui.com/img/ecommerce-images/home-page-03-favorite-01.jpg',
+    imageAlt: "Model wearing women's black cotton crewneck tee.",
+  },
+  // More products...
+]
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>
-          Homepage
-        </title>
-        <meta
-          name="description"
-          content="Homepage"
-        />
+        <title>Homepage</title>
+        <meta name="description" content="Homepage" />
       </Head>
-      <NavTop />
-      <HeroBanner />
-      <Steps />
-      <NavBar />
-      <TableOfContents />
-      <Testimonial
-        id="testimonial-from-tommy-stroman"
-        author={{
-          name: 'Tommy Stroman',
-          role: 'Front-end developer',
-          image: avatarImage1,
-        }}
-      >
-        <p>
-          “I didn’t know a thing about icon design until I read this book. Now I
-          can create any icon I need in no time. Great resource!”
-        </p>
-      </Testimonial>
+      <NavTop items={navigation} />
+      <HeroBanner items={heroList} />
+      <Steps
+        headerBlock={
+          <TextHeader
+            label="How to buy"
+            title="Steps to order"
+            description="Phasellus lorem quam molestie id quisque diam aenean nulla in.
+          Accumsan in quis quis nunc, ullamcorper malesuada. Eleifend
+          condimentum id viverra nulla."
+          />
+        }
+        items={steps}
+      />
+      <ProductsList
+        items={products}
+        headerBlock={
+          <TextHeader
+            title="Favourite products"
+            description="By default Swiper React uses core version of Swiper (without any additional modules). If you want to use Navigation, Pagination and other modules, you have to install them first. Here is the list of additional modules imports:"
+          />
+        }
+      />
       <Screencasts />
       <Testimonial
         id="testimonial-from-gerardo-stark"

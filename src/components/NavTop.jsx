@@ -4,14 +4,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 import logo from '@/images/logo.png'
 
-const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
-]
-
-const NavTop = () => {
+const NavTop = ({items}) => {
   return (
     <div className="relative bg-white">
       <div className="relative z-10 bg-white lg:w-full lg:max-w-2xl">
@@ -50,7 +43,7 @@ const NavTop = () => {
                 </div>
               </div>
               <div className="hidden md:ml-10 md:block md:space-x-8 md:pr-4">
-                {navigation.map((item) => (
+                {items.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
@@ -99,7 +92,7 @@ const NavTop = () => {
                   </div>
                 </div>
                 <div className="space-y-1 px-2 pt-2 pb-3">
-                  {navigation.map((item) => (
+                  {items.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}

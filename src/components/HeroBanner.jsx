@@ -6,46 +6,9 @@ import { Container } from '@/components/Container'
 import { EffectFade, EffectCreative } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/effect-fade'
+import 'swiper/css/autoplay'
 
-import image1 from '@/images/pexels-tara-winstead-6690916.jpg';
-import image2 from '@/images/pexels-ylanite-koppens-1693653.jpg';
-
-const data = [
-  {
-    title: 'Data to enrich your',
-    titleHighlight: 'online business',
-    description:
-      'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.',
-    button: {
-      text: 'Our products',
-      href: '#section1',
-    },
-    button2: {
-      text: 'More details',
-      href: '#section2',
-    },
-    image: image1,
-  },
-  {
-    title: 'Hero banner',
-    titleHighlight: 'Slide 2',
-    description:
-      'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.',
-    button: {
-      text: 'Our products',
-      href: '#section1',
-    },
-    button2: {
-      text: 'More details',
-      href: '#section2',
-    },
-    image: image2,
-  },
-]
-
-export function HeroBanner() {
-  const height = 80
-  const heightDesktop = 136
+export function HeroBanner({ items }) {
   return (
     <section className="overflow-hidden bg-slate-100">
       <Swiper
@@ -55,6 +18,11 @@ export function HeroBanner() {
         onSwiper={(swiper) => console.log(swiper)}
         grabCursor={true}
         effect={'creative'}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        loop={true}
         creativeEffect={{
           prev: {
             shadow: true,
@@ -66,7 +34,7 @@ export function HeroBanner() {
         }}
         modules={[EffectCreative]}
       >
-        {data.map((item, index) => (
+        {items.map((item, index) => (
           <SwiperSlide
             key={index}
             style={{backgroundImage: 'url(' + item.image.src + ')'}}
