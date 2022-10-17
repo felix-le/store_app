@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* Swiper */
+@layer base {
+    :root {
+        --swiper-theme-color: theme(colors.indigo.600) !important;
+    }
+}
+.swiper-custom {
+    padding-bottom: 30px !important;
+}
+.swiper-custom .swiper-pagination {
+    bottom: 0px !important;
+}

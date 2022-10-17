@@ -6,7 +6,6 @@ import { FreeChapters } from '@/components/FreeChapters'
 import { HeroBanner } from '@/components/HeroBanner'
 import { NavBar } from '@/components/NavBar'
 import { Pricing } from '@/components/Pricing'
-import { Resources } from '@/components/Resources'
 import { Screencasts } from '@/components/Screencasts'
 import { Testimonial } from '@/components/Testimonial'
 import { Testimonials } from '@/components/Testimonials'
@@ -19,6 +18,7 @@ import TextHeader from '@/components/TextHeader'
 import image1 from '@/images/pexels-tara-winstead-6690916.jpg'
 import image2 from '@/images/pexels-ylanite-koppens-1693653.jpg'
 import ProductsList from '@/components/ProductsList'
+import Categories from '@/components/Categories'
 
 const navigation = [
   { name: 'Product', href: '#' },
@@ -89,7 +89,7 @@ const products = [
     imageAlt: "Model wearing women's black cotton crewneck tee.",
   },
   {
-    id: 1,
+    id: 10,
     name: 'Black Basic Tee',
     price: '$32',
     href: '#',
@@ -157,6 +157,14 @@ export default function Home() {
           />
         }
       />
+      <Categories
+        headerBlock={
+          <TextHeader
+            title="Categories"
+            description="Over an hour of high quality, step-by-step video content to sharpen your icon design workflow."
+          />
+        }
+      />
       <Screencasts />
       <Testimonial
         id="testimonial-from-gerardo-stark"
@@ -171,7 +179,6 @@ export default function Home() {
           frustrated and gave up. Now I sell my own custom icon sets online.”
         </p>
       </Testimonial>
-      <Resources />
       <FreeChapters />
       <Pricing />
       <Testimonials />

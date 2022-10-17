@@ -16,10 +16,12 @@
     "autoprefixer": "^10.4.12",
     "clsx": "^1.2.1",
     "focus-visible": "^5.2.0",
+    "jss": "^10.9.2",
     "next": "^12.3.1",
     "postcss-focus-visible": "^6.0.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-jss": "^10.9.2",
     "swiper": "^8.4.3",
     "tailwindcss": "^3.1.8"
   },
