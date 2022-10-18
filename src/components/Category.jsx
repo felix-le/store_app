@@ -16,7 +16,7 @@ export default function Category({ items, title = 'Category', allItemsHref }) {
 
   return (
     <div className="bg-white">
-      <div className="py-16 sm:py-24 lg:mx-auto lg:max-w-7xl lg:px-8">
+      <div className="pt-16 sm:pt-24 lg:mx-auto lg:max-w-7xl lg:px-8">
         <div className="flex items-center justify-between px-4 sm:px-6 lg:px-0">
           <h2 className="text-2xl font-bold tracking-tight text-gray-900">
             {title}
@@ -40,15 +40,15 @@ export default function Category({ items, title = 'Category', allItemsHref }) {
               slidesPerView={"auto"}
               onSlideChange={() => console.log('slide change')}
               onSwiper={(swiper) => console.log(swiper)}
-              pagination={{
-                dynamicBullets: true,
-              }}
-              modules={[Pagination]}
-              breakpoints={{
-                640: {
-                  pagination: false
-                }
-              }}
+              // pagination={{
+              //   dynamicBullets: true,
+              // }}
+              // modules={[Pagination]}
+              // breakpoints={{
+              //   640: {
+              //     pagination: false
+              //   }
+              // }}
             >
               {items.map((product) => (
                 <SwiperSlide

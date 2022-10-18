@@ -1,8 +1,8 @@
 import React from 'react'
 
-const ProductsList = ({ items: products, headerBlock }) => {
+const FavouriteProducts = ({ items: products, headerBlock }) => {
   return (
-    <div className="bg-slate-100 overflow-hidden">
+    <section id="favourite-products" className="bg-slate-100 overflow-hidden">
       <div className="relative h-full">
         <svg
           className="absolute right-full translate-y-1/3 translate-x-1/4 transform sm:translate-x-1/2 md:translate-y-1/2 lg:translate-x-full"
@@ -103,8 +103,8 @@ const ProductsList = ({ items: products, headerBlock }) => {
           </a>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
-export default ProductsList
+export default FavouriteProducts

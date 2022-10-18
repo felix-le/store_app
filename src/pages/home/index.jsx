@@ -14,17 +14,15 @@ import avatarImage2 from '@/images/avatars/avatar-2.png'
 import NavTop from '@/components/NavTop'
 import Steps from '@/components/Steps'
 import TextHeader from '@/components/TextHeader'
+import Categories from '@/components/Categories'
+import FavouriteProducts from '@/components/FavouriteProducts'
 
 import image1 from '@/images/pexels-tara-winstead-6690916.jpg'
 import image2 from '@/images/pexels-ylanite-koppens-1693653.jpg'
-import ProductsList from '@/components/ProductsList'
-import Categories from '@/components/Categories'
 
 const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
+  { name: 'Favourite Products', href: '#favourite-products' },
+  { name: 'Categories', href: '#categories' },
 ]
 
 const steps = [
@@ -53,7 +51,7 @@ const heroList = [
       'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.',
     button: {
       text: 'Our products',
-      href: '#section1',
+      href: '#categories',
     },
     button2: {
       text: 'More details',
@@ -68,7 +66,7 @@ const heroList = [
       'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.',
     button: {
       text: 'Our products',
-      href: '#section1',
+      href: '#categories',
     },
     button2: {
       text: 'More details',
@@ -78,7 +76,7 @@ const heroList = [
   },
 ]
 
-const products = [
+const favouriteProductsList = [
   {
     id: 1,
     name: 'Black Basic Tee',
@@ -127,6 +125,215 @@ const products = [
   // More products...
 ]
 
+const categoriesList = [
+  {
+    id: 1,
+    name: 'Soap',
+    products: [
+      {
+        id: 1,
+        name: 'Machined Pen',
+        color: 'Black',
+        price: '$35',
+        href: '#',
+        imageSrc:
+          'https://tailwindui.com/img/ecommerce-images/home-page-02-product-01.jpg',
+        imageAlt:
+          'Black machined steel pen with hexagonal grip and small white logo at top.',
+        availableColors: [
+          { name: 'Black', colorBg: '#111827' },
+          { name: 'Brass', colorBg: '#FDE68A' },
+          { name: 'Chrome', colorBg: '#E5E7EB' },
+        ],
+      },
+      {
+        id: 2,
+        name: 'Machined Pen',
+        color: 'Black',
+        price: '$35',
+        href: '#',
+        imageSrc:
+          'https://tailwindui.com/img/ecommerce-images/home-page-02-product-01.jpg',
+        imageAlt:
+          'Black machined steel pen with hexagonal grip and small white logo at top.',
+        availableColors: [
+          { name: 'Black', colorBg: '#111827' },
+          { name: 'Brass', colorBg: '#FDE68A' },
+          { name: 'Chrome', colorBg: '#E5E7EB' },
+        ],
+      },
+      {
+        id: 3,
+        name: 'Machined Pen',
+        color: 'Black',
+        price: '$35',
+        href: '#',
+        imageSrc:
+          'https://tailwindui.com/img/ecommerce-images/home-page-02-product-01.jpg',
+        imageAlt:
+          'Black machined steel pen with hexagonal grip and small white logo at top.',
+        availableColors: [
+          { name: 'Black', colorBg: '#111827' },
+          { name: 'Brass', colorBg: '#FDE68A' },
+          { name: 'Chrome', colorBg: '#E5E7EB' },
+        ],
+      },
+      {
+        id: 4,
+        name: 'Machined Pen',
+        color: 'Black',
+        price: '$35',
+        href: '#',
+        imageSrc:
+          'https://tailwindui.com/img/ecommerce-images/home-page-02-product-01.jpg',
+        imageAlt:
+          'Black machined steel pen with hexagonal grip and small white logo at top.',
+        availableColors: [
+          { name: 'Black', colorBg: '#111827' },
+          { name: 'Brass', colorBg: '#FDE68A' },
+          { name: 'Chrome', colorBg: '#E5E7EB' },
+        ],
+      },
+      {
+        id: 5,
+        name: 'Machined Pen',
+        color: 'Black',
+        price: '$35',
+        href: '#',
+        imageSrc:
+          'https://tailwindui.com/img/ecommerce-images/home-page-02-product-01.jpg',
+        imageAlt:
+          'Black machined steel pen with hexagonal grip and small white logo at top.',
+        availableColors: [
+          { name: 'Black', colorBg: '#111827' },
+          { name: 'Brass', colorBg: '#FDE68A' },
+          { name: 'Chrome', colorBg: '#E5E7EB' },
+        ],
+      },
+      {
+        id: 6,
+        name: 'Machined Pen',
+        color: 'Black',
+        price: '$35',
+        href: '#',
+        imageSrc:
+          'https://tailwindui.com/img/ecommerce-images/home-page-02-product-01.jpg',
+        imageAlt:
+          'Black machined steel pen with hexagonal grip and small white logo at top.',
+        availableColors: [
+          { name: 'Black', colorBg: '#111827' },
+          { name: 'Brass', colorBg: '#FDE68A' },
+          { name: 'Chrome', colorBg: '#E5E7EB' },
+        ],
+      },
+      // More products...
+    ],
+  },
+  {
+    id: 2,
+    name: 'Chrimast present',
+    products: [
+      {
+        id: 1,
+        name: 'Machined Pen',
+        color: 'Black',
+        price: '$35',
+        href: '#',
+        imageSrc:
+          'https://tailwindui.com/img/ecommerce-images/home-page-02-product-01.jpg',
+        imageAlt:
+          'Black machined steel pen with hexagonal grip and small white logo at top.',
+        availableColors: [
+          { name: 'Black', colorBg: '#111827' },
+          { name: 'Brass', colorBg: '#FDE68A' },
+          { name: 'Chrome', colorBg: '#E5E7EB' },
+        ],
+      },
+      {
+        id: 2,
+        name: 'Machined Pen',
+        color: 'Black',
+        price: '$35',
+        href: '#',
+        imageSrc:
+          'https://tailwindui.com/img/ecommerce-images/home-page-02-product-01.jpg',
+        imageAlt:
+          'Black machined steel pen with hexagonal grip and small white logo at top.',
+        availableColors: [
+          { name: 'Black', colorBg: '#111827' },
+          { name: 'Brass', colorBg: '#FDE68A' },
+          { name: 'Chrome', colorBg: '#E5E7EB' },
+        ],
+      },
+      {
+        id: 3,
+        name: 'Machined Pen',
+        color: 'Black',
+        price: '$35',
+        href: '#',
+        imageSrc:
+          'https://tailwindui.com/img/ecommerce-images/home-page-02-product-01.jpg',
+        imageAlt:
+          'Black machined steel pen with hexagonal grip and small white logo at top.',
+        availableColors: [
+          { name: 'Black', colorBg: '#111827' },
+          { name: 'Brass', colorBg: '#FDE68A' },
+          { name: 'Chrome', colorBg: '#E5E7EB' },
+        ],
+      },
+      {
+        id: 4,
+        name: 'Machined Pen',
+        color: 'Black',
+        price: '$35',
+        href: '#',
+        imageSrc:
+          'https://tailwindui.com/img/ecommerce-images/home-page-02-product-01.jpg',
+        imageAlt:
+          'Black machined steel pen with hexagonal grip and small white logo at top.',
+        availableColors: [
+          { name: 'Black', colorBg: '#111827' },
+          { name: 'Brass', colorBg: '#FDE68A' },
+          { name: 'Chrome', colorBg: '#E5E7EB' },
+        ],
+      },
+      {
+        id: 5,
+        name: 'Machined Pen',
+        color: 'Black',
+        price: '$35',
+        href: '#',
+        imageSrc:
+          'https://tailwindui.com/img/ecommerce-images/home-page-02-product-01.jpg',
+        imageAlt:
+          'Black machined steel pen with hexagonal grip and small white logo at top.',
+        availableColors: [
+          { name: 'Black', colorBg: '#111827' },
+          { name: 'Brass', colorBg: '#FDE68A' },
+          { name: 'Chrome', colorBg: '#E5E7EB' },
+        ],
+      },
+      {
+        id: 6,
+        name: 'Machined Pen',
+        color: 'Black',
+        price: '$35',
+        href: '#',
+        imageSrc:
+          'https://tailwindui.com/img/ecommerce-images/home-page-02-product-01.jpg',
+        imageAlt:
+          'Black machined steel pen with hexagonal grip and small white logo at top.',
+        availableColors: [
+          { name: 'Black', colorBg: '#111827' },
+          { name: 'Brass', colorBg: '#FDE68A' },
+          { name: 'Chrome', colorBg: '#E5E7EB' },
+        ],
+      },
+      // More products...
+    ],
+  },
+]
+
 export default function Home() {
   return (
     <>
@@ -148,8 +355,8 @@ export default function Home() {
         }
         items={steps}
       />
-      <ProductsList
-        items={products}
+      <FavouriteProducts
+        items={favouriteProductsList}
         headerBlock={
           <TextHeader
             title="Favourite products"
@@ -164,6 +371,7 @@ export default function Home() {
             description="Over an hour of high quality, step-by-step video content to sharpen your icon design workflow."
           />
         }
+        items={categoriesList}
       />
       <Screencasts />
       <Testimonial
