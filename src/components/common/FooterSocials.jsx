@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from './Container'
+import { Container } from '@/components/Container'
 
 const navigation = {
   main: [
@@ -75,9 +75,10 @@ const navigation = {
   ],
 }
 
-const FooterSocials = () => {
+const FooterSocials = ({devider = false}) => {
+  const classes = devider ? 'border border-0 border-solid border-t border-slate-200' : ''
   return (
-    <footer className="bg-white">
+    <footer className={`bg-white ${classes}`}>
       <Container size="md">
         <div className="mx-auto max-w-7xl overflow-hidden py-12 px-4 sm:px-6 lg:px-8">
           <nav

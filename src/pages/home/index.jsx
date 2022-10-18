@@ -1,31 +1,19 @@
 import Head from 'next/head'
 
-import { Author } from '@/components/Author'
-import { Footer } from '@/components/Footer'
-import { FreeChapters } from '@/components/FreeChapters'
 import { HeroBanner } from '@/components/HeroBanner'
-import { NavBar } from '@/components/NavBar'
-import { Pricing } from '@/components/Pricing'
 import { Testimonial } from '@/components/Testimonial'
-import { Testimonials } from '@/components/Testimonials'
-import avatarImage1 from '@/images/avatars/avatar-1.png'
-import avatarImage2 from '@/images/avatars/avatar-2.png'
-import NavTop from '@/components/NavTop'
+import NavTop from '@/components/common/NavTop'
 import Steps from '@/components/Steps'
 import TextHeader from '@/components/TextHeader'
 import Categories from '@/components/Categories'
 import FavouriteProducts from '@/components/FavouriteProducts'
+import Subscribe from '@/components/Subscribe'
+import FooterSocials from '@/components/common/FooterSocials'
 
 import image1 from '@/images/pexels-tara-winstead-6690916.jpg'
 import image2 from '@/images/pexels-ylanite-koppens-1693653.jpg'
-import Subscribe from '@/components/Subscribe'
-import FooterSocials from '@/components/FooterSocials'
-
-const navigation = [
-  { name: 'Favourite Products', href: '#favourite-products' },
-  { name: 'Categories', href: '#categories' },
-  { name: 'How to buy', href: '#how-to-buy' },
-]
+import avatar from '@/images/avatars/avatar-2.png'
+import Layout from '@/components/common/Layout'
 
 const steps = [
   {
@@ -343,59 +331,59 @@ export default function Home() {
         <title>Homepage</title>
         <meta name="description" content="Homepage" />
       </Head>
-      <NavTop items={navigation} />
-      <HeroBanner items={heroList} />
-      <Steps
-        headerBlock={
-          <TextHeader
-            label="How to buy"
-            title="Steps to order"
-            description="Phasellus lorem quam molestie id quisque diam aenean nulla in.
+      <Layout>
+        <HeroBanner items={heroList} />
+        <Steps
+          headerBlock={
+            <TextHeader
+              label="How to buy"
+              title="Steps to order"
+              description="Phasellus lorem quam molestie id quisque diam aenean nulla in.
           Accumsan in quis quis nunc, ullamcorper malesuada. Eleifend
           condimentum id viverra nulla."
-          />
-        }
-        items={steps}
-        id="how-to-buy"
-      />
-      <FavouriteProducts
-        items={favouriteProductsList}
-        headerBlock={
-          <TextHeader
-            title="Favourite products"
-            description="By default Swiper React uses core version of Swiper (without any additional modules). If you want to use Navigation, Pagination and other modules, you have to install them first. Here is the list of additional modules imports:"
-          />
-        }
-      />
-      <Categories
-        headerBlock={
-          <TextHeader
-            title="Categories"
-            description="Over an hour of high quality, step-by-step video content to sharpen your icon design workflow."
-          />
-        }
-        items={categoriesList}
-      />
-      <Testimonial
-        id="testimonial-from-gerardo-stark"
-        author={{
-          name: 'Gerardo Stark',
-          role: 'Creator of Pandemicons',
-          image: avatarImage2,
-        }}
-      >
-        <p>
-          “I’ve tried to create my own icons in the past but quickly got
-          frustrated and gave up. Now I sell my own custom icon sets online.”
-        </p>
-      </Testimonial>
-      <Subscribe
-        title="Join our soap community"
-        description="Be the first to know about new releases, exclusive offers, tips and more"
-        id="subscribe"
-        formTitle="Give us your contact"
-      />
-      <FooterSocials/>
+            />
+          }
+          items={steps}
+          id="how-to-buy"
+        />
+        <FavouriteProducts
+          items={favouriteProductsList}
+          headerBlock={
+            <TextHeader
+              title="Favourite products"
+              description="By default Swiper React uses core version of Swiper (without any additional modules). If you want to use Navigation, Pagination and other modules, you have to install them first. Here is the list of additional modules imports:"
+            />
+          }
+        />
+        <Categories
+          headerBlock={
+            <TextHeader
+              title="Categories"
+              description="Over an hour of high quality, step-by-step video content to sharpen your icon design workflow."
+            />
+          }
+          items={categoriesList}
+        />
+        <Testimonial
+          id="testimonial-from-gerardo-stark"
+          author={{
+            name: 'Gerardo Stark',
+            role: 'Creator of Pandemicons',
+            image: avatar,
+          }}
+        >
+          <p>
+            “I’ve tried to create my own icons in the past but quickly got
+            frustrated and gave up. Now I sell my own custom icon sets online.”
+          </p>
+        </Testimonial>
+        <Subscribe
+          title="Join our soap community"
+          description="Be the first to know about new releases, exclusive offers, tips and more"
+          id="subscribe"
+          formTitle="Give us your contact"
+        />
+      </Layout>
     </>
   )
 }

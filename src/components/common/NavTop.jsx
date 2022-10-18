@@ -4,10 +4,16 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 import logo from '@/images/logo.png'
 
-const NavTop = ({items}) => {
+const navigation = [
+  { name: 'Favourite Products', href: '#favourite-products' },
+  { name: 'Categories', href: '#categories' },
+  { name: 'How to buy', href: '#how-to-buy' },
+]
+
+const NavTop = () => {
   return (
-    <div className="relative bg-white sticky top-0 z-40 scroll:drop-shadow-md">
-      <div className="relative z-10 bg-white lg:w-full lg:max-w-2xl">
+    <div className="bg-white sticky top-0 z-40">
+      <div className="relative z-10 lg:w-full bg-white shadow-sm lg:overflow-x-hidden">
         <svg
           className="absolute inset-y-0 right-0 hidden h-full w-48 translate-x-1/2 transform text-white lg:block"
           fill="currentColor"
@@ -43,7 +49,7 @@ const NavTop = ({items}) => {
                 </div>
               </div>
               <div className="hidden md:ml-10 md:block md:space-x-8 md:pr-4">
-                {items.map((item) => (
+                {navigation.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
@@ -92,7 +98,7 @@ const NavTop = ({items}) => {
                   </div>
                 </div>
                 <div className="space-y-1 px-2 pt-2 pb-3">
-                  {items.map((item) => (
+                  {navigation.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
