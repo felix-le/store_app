@@ -19,10 +19,12 @@ import FavouriteProducts from '@/components/FavouriteProducts'
 import image1 from '@/images/pexels-tara-winstead-6690916.jpg'
 import image2 from '@/images/pexels-ylanite-koppens-1693653.jpg'
 import Subscribe from '@/components/Subscribe'
+import FooterSocials from '@/components/FooterSocials'
 
 const navigation = [
   { name: 'Favourite Products', href: '#favourite-products' },
   { name: 'Categories', href: '#categories' },
+  { name: 'How to buy', href: '#how-to-buy' },
 ]
 
 const steps = [
@@ -354,6 +356,7 @@ export default function Home() {
           />
         }
         items={steps}
+        id="how-to-buy"
       />
       <FavouriteProducts
         items={favouriteProductsList}
@@ -392,7 +395,7 @@ export default function Home() {
         id="subscribe"
         formTitle="Give us your contact"
       />
-      <Footer />
+      <FooterSocials/>
     </>
   )
 }

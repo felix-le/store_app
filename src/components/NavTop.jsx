@@ -6,7 +6,7 @@ import logo from '@/images/logo.png'
 
 const NavTop = ({items}) => {
   return (
-    <div className="relative bg-white sticky top-0 z-40">
+    <div className="relative bg-white sticky top-0 z-40 scroll:drop-shadow-md">
       <div className="relative z-10 bg-white lg:w-full lg:max-w-2xl">
         <svg
           className="absolute inset-y-0 right-0 hidden h-full w-48 translate-x-1/2 transform text-white lg:block"
@@ -52,12 +52,12 @@ const NavTop = ({items}) => {
                     {item.name}
                   </a>
                 ))}
-                <a
+                {/* <a
                   href="#"
                   className="font-medium text-indigo-600 hover:text-indigo-500"
                 >
                   Log in
-                </a>
+                </a> */}
               </div>
             </nav>
           </div>
@@ -102,12 +102,12 @@ const NavTop = ({items}) => {
                     </a>
                   ))}
                 </div>
-                <a
+                {/* <a
                   href="#"
                   className="block w-full bg-gray-50 px-5 py-3 text-center font-medium text-indigo-600 hover:bg-gray-100"
                 >
                   Log in
-                </a>
+                </a> */}
               </div>
             </Popover.Panel>
           </Transition>

@@ -4,9 +4,11 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { EffectFade, EffectCreative } from 'swiper'
+import { Pagination } from "swiper"
 import 'swiper/css'
 import 'swiper/css/effect-fade'
 import 'swiper/css/autoplay'
+import "swiper/css/pagination"
 
 export function HeroBanner({ items }) {
   return (
@@ -19,8 +21,8 @@ export function HeroBanner({ items }) {
         grabCursor={true}
         effect={'creative'}
         autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
+          delay: 500,
+          pauseOnMouseEnter: true
         }}
         loop={true}
         creativeEffect={{
@@ -32,7 +34,10 @@ export function HeroBanner({ items }) {
             translate: ['100%', 0, 0],
           },
         }}
-        modules={[EffectCreative]}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[EffectCreative, Pagination]}
       >
         {items.map((item, index) => (
           <SwiperSlide
