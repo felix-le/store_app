@@ -6,7 +6,6 @@ import { FreeChapters } from '@/components/FreeChapters'
 import { HeroBanner } from '@/components/HeroBanner'
 import { NavBar } from '@/components/NavBar'
 import { Pricing } from '@/components/Pricing'
-import { Screencasts } from '@/components/Screencasts'
 import { Testimonial } from '@/components/Testimonial'
 import { Testimonials } from '@/components/Testimonials'
 import avatarImage1 from '@/images/avatars/avatar-1.png'
@@ -19,6 +18,7 @@ import FavouriteProducts from '@/components/FavouriteProducts'
 
 import image1 from '@/images/pexels-tara-winstead-6690916.jpg'
 import image2 from '@/images/pexels-ylanite-koppens-1693653.jpg'
+import Subscribe from '@/components/Subscribe'
 
 const navigation = [
   { name: 'Favourite Products', href: '#favourite-products' },
@@ -373,7 +373,6 @@ export default function Home() {
         }
         items={categoriesList}
       />
-      <Screencasts />
       <Testimonial
         id="testimonial-from-gerardo-stark"
         author={{
@@ -387,10 +386,12 @@ export default function Home() {
           frustrated and gave up. Now I sell my own custom icon sets online.”
         </p>
       </Testimonial>
-      <FreeChapters />
-      <Pricing />
-      <Testimonials />
-      <Author />
+      <Subscribe
+        title="Join our soap community"
+        description="Be the first to know about new releases, exclusive offers, tips and more"
+        id="subscribe"
+        formTitle="Give us your contact"
+      />
       <Footer />
     </>
   )

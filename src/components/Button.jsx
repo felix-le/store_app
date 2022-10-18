@@ -14,7 +14,7 @@ const variantStyles = {
       'bg-slate-900 text-white hover:bg-slate-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 active:bg-slate-700 active:text-white/80 disabled:opacity-30 disabled:hover:bg-slate-900',
     indigo: 'bg-indigo-600 text-white hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 active:bg-indigo-700 active:text-white/80 disabled:opacity-30 disabled:hover:bg-indigo-600',
     white:
-      'bg-white text-indigo-600 hover:text-indigo-700 focus-visible:text-indigo-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:bg-indigo-50 active:text-indigo-900/80 disabled:opacity-40 disabled:hover:text-indigo-600',
+      'bg-white text-indigo-600 hover:text-white focus-visible:text-indigo-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:bg-indigo-50 active:text-indigo-900/80 disabled:opacity-40 disabled:hover:text-indigo-600',
   },
   outline: {
     slate:
