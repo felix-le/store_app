@@ -3,6 +3,7 @@ import { Popover, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 import logo from '@/images/logo.png'
+import Cart from '../Cart'
 
 const navigation = [
   { name: 'Favourite Products', href: '#favourite-products' },
@@ -48,7 +49,7 @@ const NavTop = () => {
                   </div>
                 </div>
               </div>
-              <div className="hidden md:ml-10 md:block md:space-x-8 md:pr-4">
+              <div className="hidden md:ml-10 md:flex md:space-x-8 md:pr-4">
                 {navigation.map((item) => (
                   <a
                     key={item.name}
@@ -64,6 +65,7 @@ const NavTop = () => {
                 >
                   Log in
                 </a> */}
+                <Cart />
               </div>
             </nav>
           </div>

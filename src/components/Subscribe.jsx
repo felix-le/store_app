@@ -35,7 +35,7 @@ const Subscribe = ({
                 {formTitle} <span aria-hidden="true">&rarr;</span>
               </h3>
             )}
-            <div className="mt-4 sm:relative sm:flex sm:items-center sm:py-0.5">
+            <div className="mt-4 sm:relative sm:flex sm:items-center sm:py-0.5 sm:pr-0.5">
               <div className="relative sm:static sm:flex-auto">
                 <input
                   type="email"

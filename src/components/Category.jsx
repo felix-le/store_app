@@ -65,7 +65,7 @@ export default function Category({ items, title = 'Category', allItemsHref }) {
                     </div>
                     <div className="mt-6">
                       <h3 className="mt-1 font-semibold text-gray-900">
-                        <a href={product.href}>
+                        <a href={`/product/${product.id}`}>
                           <span className="absolute inset-0" />
                           {product.name}
                         </a>

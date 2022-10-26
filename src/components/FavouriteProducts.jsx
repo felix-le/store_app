@@ -77,13 +77,13 @@ const FavouriteProducts = ({ items: products, headerBlock }) => {
             <div key={product.id} className="group relative my-5">
               <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-lg group-hover:opacity-75">
                 <img
-                  src={product.imageSrc}
-                  alt={product.imageAlt}
+                  src={product.images[0].src}
+                  alt={product.images[0].alt}
                   className="h-full w-full object-cover object-center"
                 />
               </div>
               <h3 className="mt-4 text-base font-semibold text-gray-900">
-                <a href={product.href}>
+                <a href={`/product/${product.id}`}>
                   <span className="absolute inset-0" />
                   {product.name}
                 </a>
